@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Yanone+Kaffeesatz');
+* {
+    box-sizing: border-box;
+  }
+  img {
+    display: block;
+    max-width: 100%;
+  }
+  body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  h1, h2, h4, h5, h6 , {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 1.5px;
+  }
+  .h3{
+    text-align: center;
+    border-style: solid;
+    color: lightslategray;
+    text-shadow: 2px 3px rgb(3, 3, 3);
+  }
+  .pe{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    text-align: center;
+    font-size: 30px;
+    color: rgb(151, 255, 238)
+  }
+  .section__titulo {
+    text-align: center;
+    font-size: 40px;
+    color: #FBA919;
+  }
+  .contenedor {
+    margin: auto;
+    width: 99%;
+    font-weight:bold;
+    letter-spacing:2px;
+  }
+  /*-------------------Estilos del header-------------------*/
+  .header {
+    height: 60px;
+  }
+  .header .contenedor {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo, .icon-menu {
+    margin: 5px;
+    color: #fff;
+  }
+  .icon-menu {
+    display: block;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    background: #FBA919;
+    text-align: center;
+    line-height: 45px;
+    border-radius: 5px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  /*------------------Estilos del menu------------------*/
+  .nav {
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    width: 100%;
+    transition: all 0.4s;
+  }
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .menu__link {
+    display: block;
+    padding: 15px;
+    background: white;
+    text-decoration: none;
+    color:white;
+  }
+  .menu__link:hover, .select {
+    background: gold;
+    color: black;
+  }
+  .mostrar {
+    left: 0;
+  }
+  
+  /*--------------Estilos de banner--------------*/
+  
+  .banner {
+    margin-top: -60px;
+    position: relative;
+    z-index: -1000;
+    margin-bottom: 20px;
+  }
+  
+  .banner .contenedor {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 100%;
+    color: black;
+    text-align: center;
+  }
+  
+  .banner__txt {
+    display: none;
+  }
+   
+  /*-----------------Estilos de footer-----------------*/
+  
+  .footer {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    
+  }
+  .contenedor .footer{
+    position: relative;
+  }
+  
+  .footer .social [class^="icon-"] {
+    display: inline-block;
+    color: #333;
+    text-decoration: none;
+    font-size: 30px;
+    padding: 10px;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+  }
+  
+  /*------------------Estilos responsive------------------*/
+  
+  @media(min-width:480px) {
+    .logo {
+      font-size: 40px;
+    }
+    .banner__titulo {
+      font-size: 30px;
+      margin: 5px 0;
+    }
+    .banner__txt {
+      display: block;
+      font-size: 18px;
+      margin: 7px 0;
+    }
+    .info, .cursos {
+      display: flex;
+      justify-content: space-between;
+      margin-top: -90px;
+    }
+    .info__columna {
+      width: 32%;
+    }
+    .info__titulo {
+      font-size: 30px;
+      margin: 5px 0;
+    }
+    .section__titulo {
+      width: 100%;
+    }
+    .cursos {
+      flex-wrap: wrap;
+      margin-top: 0;
+    }
+    .cursos__columna {
+      width: 49%;
+    }
+    .footer .social [class^="icon-"] {
+      margin: 0 10px;
+    }
+  }
+  @media(min-width:768px) {  
+    .banner__titulo {
+      font-size: 50px;
+    }
+    .cursos__titulo {
+      font-size: 40px;
+    }
+    .pequeña{
+      width: 200px;
+      height: 200px;
+  }
+  }
+  
+  @media(min-width:1024px) {  
+    .contenedor {
+      width: 1000px;
+    }
+    .section__titulo {
+      font-size: 50px;
+      margin: 30px 0;
+    }
+    .nav {
+      position: static;
+      width: auto;
+    }
+    .menu {
+      display: flex;
+    }
+    .icon-menu {
+      display: none;
+    }
+    .menu__link {
+      background: none;
+      font-size: 20px;
+    }
+    .select {
+      color: #fff;
+      background: #FBA919;
+    }
+    .banner__titulo {
+      font-size: 60px;
+    }
+    .banner__txt {
+      font-size: 25px;
+    }
+    .info {
+      margin-top: -120px;
+    }
+    .info__columna {
+      padding: 30px;
+    }
+    .info__titulo {
+      font-size: 40px;
+      text-align: center;
+    }
+    .cursos__descripcion {
+      padding: 20px;
+    }
+    .cursos__titulo {
+      font-size: 50px;
+    }
+    .cursos__txt {
+      font-size: 20px;
+    }
+  }
+  
+  @media(min-width:1280px) {
+    .contenedor {
+      width: 1200px;
+    }
+    .logo {
+      font-size: 60px;
+    }
+    .banner .contenedor {
+      top: 40%;
+    }
+    .info {
+      margin-top: -220px;
+    }
+  }
+/*Estilos del logo*/
+.pequeña{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+.pequeña_img{
+  width: 150px;
+  height: 150px;
+  position: absolute;
+}
+/*Estilos del mapa*/
+.maps{
+  text-align: center;
+}
+.formu{
+  background: rgb(124, 124, 124); 
+}
+/*-----------------------------*/
+.cursos__columna {
+  position: relative;
+  margin-bottom: 30px;
+}
+.cursos__descripcion {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #fff;
+  background: rgba(0,0,0,0.5);
+  width: 60%;
+  height: 100%;
+  padding: 5px;
+}
+.cursos__titulo {
+  font-size: 25px;
+  margin: 5px 0;
+}
+.cursos__img {
+  width: 100%;
+}
+/*----------Imagenes 3D-----------*/
+.contenedor_1 {
+	max-width: 1200px;
+	margin:50px auto;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.contenedor_tarjeta {
+	margin: 20px;
+}
+
+.contenedor_tarjeta a {
+	display: inline-block;
+}
+
+.contenedor_tarjeta:hover figure {
+	transform: perspective(600px) rotateY(180deg);
+	-webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+	box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+}
+
+.contenedor_tarjeta:hover figure img {
+	/* Si queremos podemos aplicar un efecto blur a nuestra imagen al girar */
+	/*filter:blur(2px);*/
+}
+
+figure {
+	width: 300px;
+	height: 350px;
+	margin:0;
+	position: relative;
+	transition: all ease .5s;
+	transform-style: preserve-3d;
+	/* Nota:
+		Establecemos que la imagen tendra una rotacion de 0grados al inicio porque si no
+		ponemos esta propiedad nos da un poco de problemas en algunos navegadores al pasar el cursor.
+	*/
+	transform: perspective(600px) rotateY(0deg);
+}
+
+figure .frontal,
+figure .trasera {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	transition: all ease .5s;
+}
+
+figure .frontal {
+	display: block;
+	background: #000;
+
+	/* Podemos ocultar la imagen al da la vuelta si lo queremos */
+	/*backface-visibility: hidden;*/
+}
+
+figure .trasera {
+	position: absolute;
+	top: 0;
+	padding: 20px;
+	color: #fff;
+	transform: perspective(600px) rotateY(180deg);
+	backface-visibility: hidden;
+	overflow: auto;
+}
+
+.contenedor_tarjeta:nth-child(1) figure .trasera{
+	background: rgba(223,234,241,0.7);
+	background: -moz-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(223,234,241,0.7)), color-stop(100%, rgba(15,99,144,1)));
+	background: -webkit-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	background: -o-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	background: -ms-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	background: linear-gradient(to bottom, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfeaf1', endColorstr='#0f6390', GradientType=0 );
+}
+
+.contenedor_tarjeta:nth-child(2) figure .trasera{
+	background: rgba(251,232,202,0.7);
+	background: -moz-linear-gradient(top, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251,232,202,0.7)), color-stop(100%, rgba(25,44,72,1)));
+	background: -webkit-linear-gradient(top, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+	background: -o-linear-gradient(top, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+	background: -ms-linear-gradient(top, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+	background: linear-gradient(to bottom, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbe8ca', endColorstr='#192c48', GradientType=0 );
+}
+
+.contenedor_tarjeta:nth-child(3) figure .trasera{
+	background: rgba(95,58,53,0.7);
+	background: -moz-linear-gradient(top, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(95,58,53,0.7)), color-stop(100%, rgba(221,32,47,1)));
+	background: -webkit-linear-gradient(top, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+	background: -o-linear-gradient(top, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+	background: -ms-linear-gradient(top, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+	background: linear-gradient(to bottom, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f3a35', endColorstr='#dd202f', GradientType=0 );
+}
+
+figure .trasera .titulo {
+	color: #fff;
+	font-weight: normal;
+	margin-bottom: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+}
+
+figure .trasera hr {
+	height: 2px;
+	background: #fff;
+	border: none;
+	margin-bottom: 20px;
+	opacity: .5;
+}
+
+figure .trasera p {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 22px;
+	font-size: 14px;
+}
+
+@media screen and (max-width: 992px) { 
+	figure .trasera {
+		/*position: relative;*/
+		backface-visibility:visible;
+		transform: perspective(600px) rotateY(0deg);
+	}
+
+	.contenedor_tarjeta:hover figure {
+		transform: perspective(600px) rotateY(0deg);	
+	}
+
+}
+.reseña{
+  color:gray;
+  font-family: 'Eater', cursive;
+}
+/*h3*/
+h3{
+  color: #fff;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 2px;
+  font-size: 300%;
+}
+.p{
+  color: #fff;
+  font-family: 'Anton', sans-serif;
+  letter-spacing: 2px;
+}
+/*Rotacion de Imagenes*/
+.contenedor_tarjeta {
+	margin: 20px;
+}
+
+.contenedor_tarjeta a {
+	display: inline-block;
+}
+
+.contenedor_tarjeta:hover figure {
+	transform: perspective(600px) rotateY(180deg);
+	-webkit-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+	box-shadow: 0px 2px 10px 2px rgba(0,0,0,0.25);
+}
+
+.contenedor_tarjeta:hover figure img {
+	/* Si queremos podemos aplicar un efecto blur a nuestra imagen al girar */
+	/*filter:blur(2px);*/
+}
+
+figure {
+	width: 300px;
+	height: 350px;
+	margin:0;
+	position: relative;
+	transition: all ease .5s;
+	transform-style: preserve-3d;
+	/* Nota:
+		Establecemos que la imagen tendra una rotacion de 0grados al inicio porque si no
+		ponemos esta propiedad nos da un poco de problemas en algunos navegadores al pasar el cursor.
+	*/
+	transform: perspective(600px) rotateY(0deg);
+}
+
+figure .frontal,
+figure .trasera {
+	width: 100%;
+	height: 100%;
+	border-radius: 5px;
+	transition: all ease .5s;
+}
+
+figure .frontal {
+	display: block;
+	background: #000;
+
+	/* Podemos ocultar la imagen al da la vuelta si lo queremos */
+	/*backface-visibility: hidden;*/
+}
+
+figure .trasera {
+	position: absolute;
+	top: 0;
+	padding: 20px;
+	color: #fff;
+	transform: perspective(600px) rotateY(180deg);
+	backface-visibility: hidden;
+	overflow: auto;
+}
+
+.contenedor_tarjeta:nth-child(1) figure .trasera{
+	background: rgba(223,234,241,0.7);
+	background: -moz-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(223,234,241,0.7)), color-stop(100%, rgba(15,99,144,1)));
+	background: -webkit-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	background: -o-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	background: -ms-linear-gradient(top, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	background: linear-gradient(to bottom, rgba(223,234,241,0.7) 0%, rgba(15,99,144,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dfeaf1', endColorstr='#0f6390', GradientType=0 );
+}
+
+.contenedor_tarjeta:nth-child(2) figure .trasera{
+	background: rgba(251,232,202,0.7);
+	background: -moz-linear-gradient(top, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(251,232,202,0.7)), color-stop(100%, rgba(25,44,72,1)));
+	background: -webkit-linear-gradient(top, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+	background: -o-linear-gradient(top, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+	background: -ms-linear-gradient(top, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+	background: linear-gradient(to bottom, rgba(251,232,202,0.7) 0%, rgba(25,44,72,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbe8ca', endColorstr='#192c48', GradientType=0 );
+}
+
+.contenedor_tarjeta:nth-child(3) figure .trasera{
+	background: rgba(95,58,53,0.7);
+	background: -moz-linear-gradient(top, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(95,58,53,0.7)), color-stop(100%, rgba(221,32,47,1)));
+	background: -webkit-linear-gradient(top, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+	background: -o-linear-gradient(top, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+	background: -ms-linear-gradient(top, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+	background: linear-gradient(to bottom, rgba(95,58,53,0.7) 0%, rgba(221,32,47,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5f3a35', endColorstr='#dd202f', GradientType=0 );
+}
+
+figure .trasera .titulo {
+	color: #fff;
+	font-weight: normal;
+	margin-bottom: 20px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 24px;
+}
+
+figure .trasera hr {
+	height: 2px;
+	background: #fff;
+	border: none;
+	margin-bottom: 20px;
+	opacity: .5;
+}
+
+figure .trasera p {
+	font-family: 'Open Sans', sans-serif;
+	line-height: 22px;
+	font-size: 14px;
+}
+
+@media screen and (max-width: 992px) { 
+	figure .trasera {
+		/*position: relative;*/
+		backface-visibility:visible;
+		transform: perspective(600px) rotateY(0deg);
+	}
+
+	.contenedor_tarjeta:hover figure {
+		transform: perspective(600px) rotateY(0deg);	
+	}
+
+}
+.reseña{
+  color:gray;
+  font-family: 'Eater', cursive;
+}
+
+.ti{
+  color: rgb(16, 55, 112);
+}
+
+.content-all{
+  width: 210px;
+  margin: auto;
+  perspective: 800px;
+  position: relative;
+  margin-top: 50px;
+}
+
+.content-carrousel{
+  width: 100%;
+  position: absolute;
+  animation: rotar 10s infinite linear;
+  transform-style: preserve-3d;
+}
+
+.content-carrousel:hover{
+  animation-play-state: paused;
+  cursor: pointer;
+}
+
+
+.content-carrousel figure{
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+  position: absolute;
+  box-shadow: 0px 0px 20px 0px black;
+  transition: all 300ms;
+  
+}
+
+.content-carrousel figure:hover{
+  box-shadow: 0px 0px 0px 0px black;
+  transition: all 300ms;
+}
+
+.content-carrousel figure:nth-child(1){transform: rotateY(0deg) translateZ(300px);}
+.content-carrousel figure:nth-child(2){transform: rotateY(40deg) translateZ(300px);}
+.content-carrousel figure:nth-child(3){transform: rotateY(80deg) translateZ(300px);}
+.content-carrousel figure:nth-child(4){transform: rotateY(120deg) translateZ(300px);}
+.content-carrousel figure:nth-child(5){transform: rotateY(160deg) translateZ(300px);}
+.content-carrousel figure:nth-child(6){transform: rotateY(200deg) translateZ(300px);}
+.content-carrousel figure:nth-child(7){transform: rotateY(240deg) translateZ(300px);}
+.content-carrousel figure:nth-child(8){transform: rotateY(280deg) translateZ(300px);}
+.content-carrousel figure:nth-child(9){transform: rotateY(320deg) translateZ(300px);}
+.content-carrousel figure:nth-child(10){transform: rotateY(360deg) translateZ(300px);}
+
+.content-carrousel img{
+  width: 100%;
+  transition: all 300ms;
+}
+
+.content-carrousel img:hover{
+  transform: scale(1.2);
+  transition: all 300ms;
+}
+
+
+@keyframes rotar{
+  from{
+      transform: rotateY(0deg);
+  }to{
+      transform: rotateY(360deg);
+  }
+}
+.tita{
+  color: gold;
+}
